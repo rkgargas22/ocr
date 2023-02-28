@@ -1,0 +1,23 @@
+﻿using System.Text.Json.Serialization;
+
+namespace Tmf.Ocr.Core.RequestModels; 
+
+public class VoterIdExtractionRequest 
+{
+    [JsonPropertyName("task_id")]
+    public string TaskId { get; set; } = string.Empty;
+
+    [JsonPropertyName("group_id")]
+    public string GroupId { get; set; } = string.Empty;
+
+    [JsonPropertyName("data")]
+    public DataVoterId Data { get; set; }
+}
+
+public class DataVoterId
+{
+    [JsonPropertyName("document1")]
+    public string Document1 { get; set; } = string.Empty;
+    [JsonPropertyName("document2")]
+    public string Document2 { get; set; } = string.Empty;
+}
